@@ -15,11 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('prueba', function(){
-   return "hola mundo"; 
-});
-Route::get('nombre/{nombre}', function($nombre){
-   return "mi nombre es: ".$nombre; 
-});
+Route::get('/','FrontController@index');
+Route::get('contacto','FrontController@contacto');
+Route::get('reviews','FrontController@reviews');
 
 Route::resource('movie','MovieController');
